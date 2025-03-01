@@ -11,8 +11,8 @@ const Statistics = ({ good, neutral, bad }) => {
   neutral votes are 0 and don't affect the numerator
   */
   const all = good + neutral + bad;
-  const average = (good * 1 + bad * -1) / (good + neutral + bad);
-  const positive = `${(good / (good + neutral + bad)) * 100} %`;
+  const average = ((good * 1 + bad * -1) / (good + neutral + bad)).toFixed(1);
+  const positive = `${((good / (good + neutral + bad)) * 100).toFixed(1)} %`;
 
   useEffect(() => {
     if (good > 0 || neutral > 0 || bad > 0) {
@@ -21,21 +21,25 @@ const Statistics = ({ good, neutral, bad }) => {
   }, [good, neutral, bad]);
 
   return (
-    <div>
+    <>
       <h1>statistics</h1>
       {feedback ? (
-        <>
-          <StatisticLine text="good" value={good} />
-          <StatisticLine text="neutral" value={neutral} />
-          <StatisticLine text="bad" value={bad} />
-          <StatisticLine text="all" value={all} />
-          <StatisticLine text="average" value={average} />
-          <StatisticLine text="positive" value={positive} />
-        </>
+        <div>
+          <table>
+            <tbody>
+              <StatisticLine text="good" value={good} />
+              <StatisticLine text="neutral" value={neutral} />
+              <StatisticLine text="bad" value={bad} />
+              <StatisticLine text="all" value={all} />
+              <StatisticLine text="average" value={average} />
+              <StatisticLine text="positive" value={positive} />
+            </tbody>
+          </table>
+        </div>
       ) : (
         <p>No feedback given</p>
       )}
-    </div>
+    </>
   );
 };
 
