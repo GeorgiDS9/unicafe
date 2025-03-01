@@ -4,11 +4,11 @@
 
 ### Intro
 
-This repository contains the exercises 1.6-1.14 for **Part 1 c and d** of the Helsinki University Full Stack Open course (2024-2025). This course is designed to teach modern full-stack web development techniques and technologies. The course can be found at this [link](https://fullstackopen.com/en/about/).
+This repository contains the exercises 1.6-1.11 for **Part 1 c and d** of the Helsinki University Full Stack Open course (2024-2025). This course is designed to teach modern full-stack web development techniques and technologies. The course can be found at this [link](https://fullstackopen.com/en/about/).
 
 This part is described [here](https://fullstackopen.com/en/part1/introduction_to_react).
 
-_Note_: Part 1 a and b have been be completed in separate repositories.
+_Note_: Part 1 a and b (1.0-1.5) have been be completed in separate repositories.
 
 ### Create the app with vite
 
